@@ -1,7 +1,6 @@
 package com.compass.challenge.msaddress.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,14 +17,9 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
-    @JsonProperty("cep")
-    private String postalCode;
-    @JsonProperty("logradouro")
-    private String street;
-    @JsonProperty("complemento")
-    private String complement;
-    @JsonProperty("localidade")
-    private String city;
-    @JsonProperty("uf")
-    private String state;
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String localidade;
+    private String uf;
 }
